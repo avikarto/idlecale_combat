@@ -3,8 +3,8 @@ Combat stat calculation tool for idlescape
 
 Enter your character level and equipment stats by editing the python file (block at the top), and then run this tool to calculate various combat metrics for important enemy targets.  These metrics will be displayed as a table in stdout:
 
-|-----------------| Hit % | Dodge % | DPS out | DPS in |
-|Enemy            |-------|---------|---------|--------|
+|                 | Hit % | Dodge % | DPS out | DPS in |
+|Enemy            |       |         |         |        |
 |Black Knight     |68.99  | 8.24    |8.28     | 0.62   |
 |Deadly Red Spider|78.73  | 9.89    |9.45     | 0.71   |
 |Lesser Demon     |59.74  |26.95    |7.17     | 2.91   |
