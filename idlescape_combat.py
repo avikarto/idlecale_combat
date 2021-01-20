@@ -21,7 +21,7 @@ my_stats = {
 }
 
 # -----------------------------------
-# -----------------------------------
+# --------- STOP EDITS HERE ---------
 # -----------------------------------
 
 def hitcalc(attacker_stats, defender_stats, nimbleBonus=0):
@@ -81,6 +81,38 @@ deadly_red_spider = {
 }
 enemy_stats['Deadly Red Spider'] = deadly_red_spider
 
+fire_giant = {
+    'strstat': 67,
+    'atkstat': 77,
+    'defstat': 115,
+    'strbonus': 20,
+    'accbonus': 25,
+    'attack_type': 'slash',
+    'atk_speed': 3.0,
+    'defbonus': {
+        'stab': 0,
+        'slash': 0,
+        'crush': -50
+    }
+}
+enemy_stats['Fire Giant'] = fire_giant
+
+ice_giant = {
+    'strstat': 95,
+    'atkstat': 107,
+    'defstat': 128,
+    'strbonus': 20,
+    'accbonus': 50,
+    'attack_type': 'stab',
+    'atk_speed': 3.0,
+    'defbonus': {
+        'stab': 0,
+        'slash': 0,
+        'crush': -50
+    }
+}
+enemy_stats['Ice Giant'] = ice_giant
+
 lesser_demon = {
     'strstat': 70,
     'atkstat': 68,
@@ -96,6 +128,22 @@ lesser_demon = {
     }
 }
 enemy_stats['Lesser Demon'] = lesser_demon
+
+moss_giant = {
+    'strstat': 85,
+    'atkstat': 97,
+    'defstat': 135,
+    'strbonus': 85,
+    'accbonus': 50,
+    'attack_type': 'crush',
+    'atk_speed': 3.6,
+    'defbonus': {
+        'stab': 0,
+        'slash': 0,
+        'crush': -50
+    }
+}
+enemy_stats['Moss Giant'] = moss_giant
 
 spriggan = {
     'strstat': 78,
