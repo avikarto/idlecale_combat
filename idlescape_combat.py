@@ -6,17 +6,17 @@ import pandas as pd
 # -----------------------------------
 # character and gear stats go here
 my_stats = {
-    'strstat': 57,
-    'atkstat': 57,
-    'defstat': 57,
-    'strbonus': 28,
-    'accbonus': 35,
-    'attack_type': 'slash',
-    'atk_speed': 2.4,
+    'strstat': 72,
+    'atkstat': 72,
+    'defstat': 72,
+    'strbonus': 102,
+    'accbonus': 90,
+    'attack_type': 'crush',
+    'atk_speed': 3.4,
     'defbonus': {
-        'stab': 129,
-        'slash': 133,
-        'crush': 121
+        'stab': 165,
+        'slash': 166,
+        'crush': 167
     }
 }
 
@@ -26,7 +26,7 @@ my_stats = {
 
 def hitcalc(attacker_stats, defender_stats, nimbleBonus=0):
     '''
-    nimbleBonus is 0, or 6 if buffed with nimble (food buff)
+    TODO: nimbleBonus is 0, or 6 if buffed with nimble (food buff)
     '''
     attackRoll = attacker_stats['atkstat'] * ( attacker_stats['accbonus'] + 64)
     def_defbonus = defender_stats['defbonus'][attacker_stats['attack_type']]
@@ -39,7 +39,8 @@ def hitcalc(attacker_stats, defender_stats, nimbleBonus=0):
     str = attacker_stats['strstat']
     str_bonus = attacker_stats['strbonus']
     max_hit = floor(1.3 + str/10 + str_bonus/80 + str*str_bonus/640)
-    dps = (1 + max_hit) / 2 * attacker_stats['atk_speed'] * hit_chance/100
+    avg_hit =  (1 + max_hit) / 2
+    dps = avg_hit * (hit_chance / 100) / attacker_stats['atk_speed']
 
     return round(hit_chance, 2), round(dps, 2)
 # def hitcalc
